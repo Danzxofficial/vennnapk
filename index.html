@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XVEE Store</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #080b14;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    text-align: center;
+    padding: 30px 15px;
+    background: #101827;
+    border-bottom: 1px solid #263247;
+}
+
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.logo span {
+    color: #5cf0e5;
+}
+
+header p {
+    color: #9aa9c0;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 25px 15px;
+}
+
+.notice {
+    background: #10213a;
+    border: 1px solid #31527b;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #cfe5ff;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns:
+        repeat(auto-fit, minmax(220px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    background: #111827;
+    border: 1px solid #263247;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.icon {
+    font-size: 35px;
+}
+
+.card h2 {
+    font-size: 20px;
+}
+
+.card p {
+    color: #9aa9c0;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(
+        90deg,
+        #4ea1ff,
+        #5cf0e5
+    );
+    color: #07111e;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+footer {
+    text-align: center;
+    padding: 25px 10px;
+    color: #9aa9c0;
+    border-top: 1px solid #263247;
+    margin-top: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        XVEE <span>STORE</span>
+    </div>
+    <p>Project Web Demo</p>
+</header>
+
+<main class="container">
+
+    <div class="notice">
+        <strong>Selamat datang!</strong>
+        <br>
+        Temukan aplikasi dan berbagai tools
+        dalam satu halaman.
+    </div>
+
+    <div class="grid">
+
+        <section class="card">
+            <div class="icon">📱</div>
+            <h2>Aplikasi</h2>
+            <p>
+                Informasi aplikasi dan tautan
+                unduhan resmi.
+            </p>
+            <button onclick="info('Aplikasi')">
+                Lihat Detail
+            </button>
+        </section>
+
+        <section class="card">
+            <div class="icon">🧩</div>
+            <h2>Tools</h2>
+            <p>
+                Berbagai alat web untuk
+                kebutuhan sehari-hari.
+            </p>
+            <button onclick="info('Tools')">
+                Lihat Detail
+            </button>
+        </section>
+
+        <section class="card">
+            <div class="icon">💬</div>
+            <h2>Kontak</h2>
+            <p>
+                Informasi kontak dan
+                komunitas resmi.
+            </p>
+            <button onclick="info('Kontak')">
+                Lihat Detail
+            </button>
+        </section>
+
+    </div>
+
+</main>
+
+<footer>
+    &copy; <span id="year"></span> XVEE Store
+</footer>
+
+<script>
+document.getElementById("year").textContent =
+    new Date().getFullYear();
+
+function info(nama) {
+    alert(
+        nama +
+        "\n\nBagian ini bisa kamu sesuaikan."
+    );
+}
+</script>
+
+</body>
+</html>
